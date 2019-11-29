@@ -1,5 +1,4 @@
 import React from 'react';
-import Titles from './Titles';
 
 export default function BookHeader(props) {
     const {authors, publisher, years} = props;

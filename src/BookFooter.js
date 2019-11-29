@@ -1,6 +1,4 @@
 import React from 'react';
-import Titles from './Titles';
-import BookHeader from './BookHeader';
 
 export default function BookFooter(props) {
     const {start, stop} = props;
