@@ -22,7 +22,7 @@ function App(props) {
     return (
     <div className="App">
       <h1>{data.title}</h1>
-      <Contents books={data.books}/>
+      <Contents books={data.books} isLoading={data.books.length === 0}/>
       <Books books={data.books}/>
     </div>
   );
