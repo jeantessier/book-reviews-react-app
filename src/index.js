@@ -4,8 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const dataUrl = document.getElementById('dataUrl').textContent
+
 ReactDOM.render(
-    <App url="/Books.json"/>,
+    <App url={dataUrl}/>,
     document.getElementById('root')
 );
 
