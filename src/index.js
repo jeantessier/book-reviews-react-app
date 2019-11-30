@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const dataUrl = document.getElementById('dataUrl').textContent
+const dataUrl = document.location.pathname.split('.html', 1)[0] + "_json.cgi";
 
 ReactDOM.render(
     <App url={dataUrl}/>,
