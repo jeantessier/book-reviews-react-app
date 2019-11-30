@@ -7,6 +7,7 @@ export default function Books(props) {
     return(
         books.map(book => (
             <Book
+                key={book.name}
                 name={book.name}
                 titles={book.titles}
                 authors={book.authors}

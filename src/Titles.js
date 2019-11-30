@@ -6,8 +6,8 @@ export default function Titles(props) {
 
     return(
         <h2>
-            {titles.map(title => (
-                <Title link={title.link} title={title.title}/>
+            {titles.map((title, index) => (
+                <Title key={index} link={title.link} title={title.title}/>
             ))}
         </h2>
     )
