@@ -6,11 +6,13 @@ import Contents from './Contents';
 import Books from './Books';
 
 function App(props) {
+    const {url} = props;
+
     const [data, setData] = useState({title: "Readings", books: []});
 
     useEffect(() => {
         axios
-            .get("/Books.json")
+            .get(url)
             .then(result => {
                 document.title = result.data.title;
                 setData(result.data);

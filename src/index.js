@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <App />,
+    <App url="/Books.json"/>,
     document.getElementById('root')
 );
 
