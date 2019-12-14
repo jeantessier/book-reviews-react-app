@@ -8,22 +8,25 @@ import Books from './Books';
 function App(props) {
     const {url} = props;
 
-    const [data, setData] = useState({title: "Readings", books: []});
+    const [title, setTitle] = useState("Readings");
+    useEffect(() => { document.title = title }, [title]);
+
+    const [books, setBooks] = useState([]);
 
     useEffect(() => {
         axios
             .get(url)
             .then(result => {
-                document.title = result.data.title;
-                setData(result.data);
+                setTitle(result.data.title);
+                setBooks(result.data.books);
             });
-    }, []);
+    }, [url]);
 
     return (
     <div className="App">
-      <h1>{data.title}</h1>
-      <Contents books={data.books} isLoading={data.books.length === 0}/>
-      <Books books={data.books}/>
+      <h1>{title}</h1>
+      <Contents books={books} isLoading={books.length === 0}/>
+      <Books books={books}/>
     </div>
   );
 }
