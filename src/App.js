@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from "axios";
 import './App.css';
 import './tufte.css';
 import Contents from './Contents';
@@ -13,13 +14,12 @@ function App(props) {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await fetch(url);
-            const data = await result.json();
-            setTitle(data.title);
-            setBooks(data.books);
-        };
-        fetchData();
+        axios
+            .get(url)
+            .then(result => {
+                setTitle(result.data.title);
+                setBooks(result.data.books);
+            });
     }, [url]);
 
     return (
