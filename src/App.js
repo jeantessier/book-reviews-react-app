@@ -13,12 +13,13 @@ function App(props) {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch(url)
-            .then(result => result.json())
-            .then(data => {
-                setTitle(data.title);
-                setBooks(data.books);
-            });
+        const fetchData = async () => {
+            const result = await fetch(url);
+            const data = await result.json();
+            setTitle(data.title);
+            setBooks(data.books);
+        };
+        fetchData();
     }, [url]);
 
     return (
