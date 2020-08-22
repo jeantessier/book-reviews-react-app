@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import './App.css';
 import './tufte.css';
 import Contents from './Contents';
@@ -11,6 +12,16 @@ function App(props) {
     useEffect(() => { document.title = title }, [title]);
 
     const [books, setBooks] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await fetch("/google_analytics.json");
+            const data = await result.json();
+            ReactGA.initialize(data.trackingId);
+            ReactGA.pageview(window.location.pathname);
+        };
+        fetchData();
+    }, []);
 
     useEffect(() => {
         const fetchData = async () => {
