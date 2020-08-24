@@ -34,12 +34,12 @@ function App(props) {
     }, [url]);
 
     return (
-    <div className="App">
-      <h1>{title}</h1>
-      <Contents books={books} isLoading={books.length === 0}/>
-      <Books books={books}/>
-    </div>
-  );
+        <div className="App">
+            <h1>{title}</h1>
+            <Contents books={books} isLoading={books.length === 0}/>
+            <Books books={books}/>
+        </div>
+    );
 }
 
 export default App;
