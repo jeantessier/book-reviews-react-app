@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import Titles from './Titles';
 import BookHeader from './BookHeader';
 import BookFooter from './BookFooter';
@@ -12,7 +13,7 @@ export default function Book(props) {
 
             <BookHeader authors={authors} publisher={publisher} years={years}/>
 
-            <section dangerouslySetInnerHTML={{__html: body }}/>
+            <section><ReactMarkdown source={body} escapeHtml={false} /></section>
 
             <BookFooter start={start} stop={stop}/>
         </article>
