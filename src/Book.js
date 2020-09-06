@@ -7,8 +7,7 @@ export default function Book(props) {
     const {name, titles, authors, publisher, years, body, start, stop} = props;
 
     return(
-        <article>
-            <a name={name}></a>
+        <article id={name}>
             <Titles titles={titles}/>
 
             <BookHeader authors={authors} publisher={publisher} years={years}/>
