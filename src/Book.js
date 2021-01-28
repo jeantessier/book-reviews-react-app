@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdownWithHtml from 'react-markdown/with-html';
+import gfm from 'remark-gfm';
 import Titles from './Titles';
 import BookHeader from './BookHeader';
 import BookFooter from './BookFooter';
@@ -13,7 +14,7 @@ export default function Book(props) {
 
             <BookHeader authors={authors} publisher={publisher} years={years}/>
 
-            <section><ReactMarkdown source={body} escapeHtml={false} /></section>
+            <section><ReactMarkdownWithHtml plugins={[gfm]} children={body} allowDangerousHtml /></section>
 
             <BookFooter start={start} stop={stop}/>
         </article>
