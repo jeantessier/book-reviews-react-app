@@ -4,7 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const dataUrl = document.location.pathname.split('.html', 1)[0] + "_json.cgi";
+const dataUrlFromPathname = pathname => pathname.includes('.html') ? dataUrlFromFilename(pathname) : dataUrlFromDirname(pathname);
+const dataUrlFromFilename = filename => filename.split('.html', 1)[0] + "_json.cgi";
+const dataUrlFromDirname = dirname => (dirname.endsWith('/') ? dirname : dirname + '/') + "_json.cgi";
+
+const dataUrl = dataUrlFromPathname(document.location.pathname);
 
 ReactDOM.render(
     <App url={dataUrl}/>,
