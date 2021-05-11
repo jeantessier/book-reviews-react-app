@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactMarkdownWithHtml from 'react-markdown/with-html';
+import Markdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import gfm from 'remark-gfm';
 import Titles from './Titles';
 import BookHeader from './BookHeader';
@@ -14,7 +15,7 @@ export default function Book(props) {
 
             <BookHeader authors={authors} publisher={publisher} years={years}/>
 
-            <section><ReactMarkdownWithHtml plugins={[gfm]} children={body} allowDangerousHtml /></section>
+            <section><Markdown rehypePlugins={[rehypeRaw]} plugins={[gfm]} children={body}/></section>
 
             <BookFooter start={start} stop={stop}/>
         </article>
