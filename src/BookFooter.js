@@ -9,12 +9,12 @@ export default function BookFooter(props) {
                 <table className="reading-metadata">
                     <tbody>
                     <tr>
-                        <td className="time">Started reading:</td>
-                        {start ? <td className="time"><code>{start}</code></td> : <td className="no_time">not started</td>}
+                        <td>Started reading:</td>
+                        {start ? <td className="time">{start}</td> : <td className="no_time">not started</td>}
                     </tr>
                     <tr>
-                        <td className="time">Finished reading:</td>
-                        {stop ? <td className="time"><code>{stop}</code></td> : <td className="no_time">in progress</td>}
+                        <td>Finished reading:</td>
+                        {stop ? <td className="time">{stop}</td> : <td className="no_time">in progress</td>}
                     </tr>
                     </tbody>
                 </table>

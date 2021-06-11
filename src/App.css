@@ -38,6 +38,11 @@
     text-align: left;
 }
 
+.reading-metadata td.time {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1rem;
+}
+
 .reading-metadata td.no_time {
     font-style: italic;
     font-variant: small-caps;
@@ -57,6 +62,14 @@
 
 dl {
     width: 55%;
+}
+
+code {
+    border-radius: 6px;
+    background-color: rgba(27, 31, 35, 0.1);
+    padding: .2em .4em;
+    margin: 0;
+    text-shadow: none;
 }
 
 h2 {
