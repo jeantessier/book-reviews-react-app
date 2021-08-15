@@ -6,10 +6,8 @@ import Titles from './Titles';
 import BookHeader from './BookHeader';
 import BookFooter from './BookFooter';
 
-export default function Book(props) {
-    const {name, titles, authors, publisher, years, body, start, stop} = props;
-
-    return(
+export default function Book({ name, titles, authors, publisher, years, body, start, stop }) {
+    return (
         <article id={name}>
             <Titles titles={titles}/>
 

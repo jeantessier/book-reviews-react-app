@@ -1,9 +1,7 @@
 import React from 'react';
 
-export default function BookFooter(props) {
-    const {start, stop} = props;
-
-    return(
+export default function BookFooter({ start, stop }) {
+    return (
         <footer>
             {start &&
                 <table className="reading-metadata">

@@ -1,9 +1,7 @@
 import React from 'react';
 
-export default function BookHeader(props) {
-    const {authors, publisher, years} = props;
-
-    return(
+export default function BookHeader({ authors, publisher, years }) {
+    return (
         <header>
             <table className="book-metadata">
                 <tbody>

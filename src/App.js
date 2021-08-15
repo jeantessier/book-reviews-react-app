@@ -5,9 +5,7 @@ import './tufte.css';
 import Contents from './Contents';
 import Books from './Books';
 
-function App(props) {
-    const {url} = props;
-
+function App({ url }) {
     const [title, setTitle] = useState("Readings");
     useEffect(() => { document.title = title }, [title]);
 

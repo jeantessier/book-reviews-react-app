@@ -1,9 +1,7 @@
 import React from 'react';
 
-export default function Contents(props) {
-    const {books, isLoading} = props;
-
-    return(
+export default function Contents({ books, isLoading }) {
+    return (
         <div>
             <p>{isLoading ? "Loading..." : "Contents"}</p>
             <div className="table-of-contents">
