@@ -7,12 +7,17 @@
     "react-scripts": "^4"
   },
   "dependencies": {
-    "react": "^17",
-    "react-dom": "^17",
-    "react-ga": "^3",
-    "react-markdown": "^6",
-    "rehype-raw": "^5",
-    "remark-gfm": "^1"
+    "@testing-library/jest-dom": "*",
+    "@testing-library/react": "*",
+    "@testing-library/user-event": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-script": "*",
+    "web-vitals": "*",
+    "react-ga": "*",
+    "react-markdown": "*",
+    "rehype-raw": "*",
+    "remark-gfm": "*"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,8 +25,16 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(bail|ccount|character-entities|escape-string-regexp|hast-.*|hastscript|html-void-elements|is-plain-obj|markdown-table|mdast-.*|micromark.*|parse-entities|property-information|react-markdown|rehype-raw|remark-.*|.*-separated-tokens|trough|unified|unist-.*|vfile.*|web-namespaces|zwitch)/)"
+    ]
+  },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [

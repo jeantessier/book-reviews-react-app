@@ -1,5 +1,5 @@
 import React from 'react';
-import Markdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import gfm from 'remark-gfm';
 import Titles from './Titles';
@@ -13,7 +13,7 @@ export default function Book({ name, titles, authors, publisher, years, body, st
 
             <BookHeader authors={authors} publisher={publisher} years={years}/>
 
-            <section><Markdown rehypePlugins={[rehypeRaw]} plugins={[gfm]} children={body}/></section>
+            <section><ReactMarkdown rehypePlugins={[rehypeRaw]} plugins={[gfm]} children={body}/></section>
 
             <BookFooter start={start} stop={stop}/>
         </article>
