@@ -12,12 +12,12 @@
     "@testing-library/user-event": "*",
     "react": "*",
     "react-dom": "*",
-    "react-script": "*",
-    "web-vitals": "*",
     "react-ga": "*",
     "react-markdown": "*",
+    "react-script": "*",
     "rehype-raw": "*",
-    "remark-gfm": "*"
+    "remark-gfm": "*",
+    "web-vitals": "*"
   },
   "scripts": {
     "start": "react-scripts start",
