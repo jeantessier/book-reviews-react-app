@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "/BookReviews",
   "devDependencies": {
-    "react-scripts": "^4"
+    "react-scripts": "*"
   },
   "dependencies": {
     "@testing-library/jest-dom": "*",
