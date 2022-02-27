@@ -13,7 +13,7 @@ export default function Book({ name, titles, authors, publisher, years, body, st
 
             <BookHeader authors={authors} publisher={publisher} years={years}/>
 
-            <section><ReactMarkdown rehypePlugins={[rehypeRaw]} plugins={[gfm]} children={body}/></section>
+            <section><ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[gfm]} children={body}/></section>
 
             <BookFooter start={start} stop={stop}/>
         </article>
