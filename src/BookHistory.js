@@ -10,7 +10,7 @@ export default function BookHistory({ history }) {
 
     return (
         <div className="history">
-            <span onClick={toggleShowHistory}>{showHistory ? '-' : '+'}</span>
+            <span onClick={toggleShowHistory}>{showHistory ? '\u2749' : '\u2744'}</span>
             {showHistory &&
                 <table>
                     <caption>History</caption>
