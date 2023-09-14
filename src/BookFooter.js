@@ -1,6 +1,8 @@
 import React from 'react';
+import './BookFooter.css';
+import BookHistory from './BookHistory';
 
-export default function BookFooter({ start, stop }) {
+export default function BookFooter({ start, stop, history }) {
     return (
         <footer>
             {start &&
@@ -17,6 +19,8 @@ export default function BookFooter({ start, stop }) {
                     </tbody>
                 </table>
             }
+
+            {history?.length > 0 && <BookHistory history={history}/>}
         </footer>
     )
 }

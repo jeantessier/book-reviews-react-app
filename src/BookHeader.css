@@ -1,0 +1,34 @@
+.book-metadata {
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.book-metadata .author {
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.book-metadata .publisher {
+    text-align: center;
+    vertical-align: top;
+}
+
+.book-metadata .published-year {
+    text-align: right;
+    vertical-align: top;
+}
+
+header {
+    width: 55%;
+}
+
+@media screen and (max-width: 760px) {
+    .book-metadata {
+        width: 100%;
+    }
+
+    header {
+        width: 90%;
+    }
+}

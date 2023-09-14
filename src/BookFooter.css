@@ -1,0 +1,18 @@
+.reading-metadata {
+    font-size: 0.9rem;
+    width: auto;
+}
+
+.reading-metadata td {
+    text-align: left;
+}
+
+.reading-metadata td.time {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1rem;
+}
+
+.reading-metadata td.no_time {
+    font-style: italic;
+    font-variant: small-caps;
+}
