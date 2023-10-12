@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "/BookReviews",
   "devDependencies": {
+    "babel-preset-react-app": "*",
     "react-scripts": "*"
   },
   "dependencies": {
