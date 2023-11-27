@@ -5,8 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const dataUrlFromPathname = pathname => pathname.includes('.html') ? dataUrlFromFilename(pathname) : dataUrlFromDirname(pathname);
-const dataUrlFromFilename = filename => filename.split('.html', 1)[0] + "_json.cgi";
-const dataUrlFromDirname = dirname => (dirname.endsWith('/') ? dirname : dirname + '/') + "_json.cgi";
+const dataUrlFromFilename = filename => filename.split('.html', 1)[0] + ".json";
+const dataUrlFromDirname = dirname => (dirname.endsWith('/') ? dirname : dirname + '/') + ".json";
 
 const dataUrl = dataUrlFromPathname(document.location.pathname);
 
