@@ -1,6 +1,6 @@
-import React from 'react';
-import './Books.css';
-import Book from './Book';
+import React from 'react'
+import './Books.css'
+import Book from './Book'
 
 export default function Books({ books }) {
     return (

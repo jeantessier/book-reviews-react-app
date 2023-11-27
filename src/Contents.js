@@ -1,5 +1,5 @@
-import React from 'react';
-import './Contents.css';
+import React from 'react'
+import './Contents.css'
 
 export default function Contents({ books, isLoading }) {
     return (

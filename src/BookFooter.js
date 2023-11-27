@@ -1,6 +1,6 @@
-import React from 'react';
-import './BookFooter.css';
-import BookHistory from './BookHistory';
+import React from 'react'
+import './BookFooter.css'
+import BookHistory from './BookHistory'
 
 export default function BookFooter({ start, stop, history }) {
     return (

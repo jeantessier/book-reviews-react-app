@@ -1,6 +1,6 @@
-import React from 'react';
-import './Titles.css';
-import Title from './Title';
+import React from 'react'
+import './Titles.css'
+import Title from './Title'
 
 export default function Titles({ titles }) {
     return (
