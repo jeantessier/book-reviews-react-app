@@ -5,6 +5,7 @@ import gfm from 'remark-gfm'
 import './Book.css'
 import Titles from './Titles'
 import BookHeader from './BookHeader'
+import ReadingTime from './ReadingTime'
 import BookFooter from './BookFooter'
 
 export default function Book({ name, titles, authors, publisher, years, body, start, stop, history }) {
@@ -13,6 +14,8 @@ export default function Book({ name, titles, authors, publisher, years, body, st
             <Titles titles={titles}/>
 
             <BookHeader authors={authors} publisher={publisher} years={years}/>
+
+            <ReadingTime body={body}/>
 
             <section><ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[gfm]} children={body}/></section>
 
