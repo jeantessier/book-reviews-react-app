@@ -15,7 +15,7 @@ export default function Book({ name, titles, authors, publisher, years, body, st
 
             <BookHeader authors={authors} publisher={publisher} years={years}/>
 
-            <ReadingTime body={body}/>
+            <ReadingTime text={body}/>
 
             <section><ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[gfm]} children={body}/></section>
 
