@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReactGA from 'react-ga'
 import './tufte.css'
+import './App.css'
 import Contents from './Contents'
 import Books from './Books'
 
