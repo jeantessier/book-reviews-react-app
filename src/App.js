@@ -31,7 +31,7 @@ export default function App({ url }) {
     }, [url])
 
     return (
-        <div className="App">
+        <div className="app">
             <h1>{title}</h1>
             <Contents books={books} isLoading={books.length === 0}/>
             <Books books={books}/>
