@@ -18,6 +18,9 @@ jobs:
         with:
           ref: ${{ github.event.head_commit.id }}
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Install modules
         run: yarn
 
