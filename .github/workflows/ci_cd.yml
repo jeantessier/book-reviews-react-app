@@ -40,11 +40,9 @@ jobs:
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
-        with:
-          path: book-reviews
 
       - name: Display structure of downloaded files
-        run: ls -lR book-reviews
+        run: ls -lR .
 
       - name: SCP to jeantessier.com
         uses: cross-the-world/scp-pipeline@master
