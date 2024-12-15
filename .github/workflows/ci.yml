@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.head_commit.id }}
+
+      - name: Install modules
+        run: yarn
+
+      - name: Build with Yarn
+        run: yarn build
