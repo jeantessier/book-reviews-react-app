@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
   push:
@@ -33,15 +33,28 @@ jobs:
           name: book-reviews
           path: ${{ github.workspace }}/build
 
-      - name: scp pipeline
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: book-reviews
+
+      - name: Unzip artifact
+        run: unzip book-reviews.zip -d book-reviews
+
+      - name: SCP to jeantessier.com
         uses: cross-the-world/scp-pipeline@master
         with:
           host: ${{ secrets.JEANTESSIER_HOST }}
           user: ${{ secrets.JEANTESSIER_USER }}
           pass: ${{ secrets.JEANTESSIER_PASS }}
           scp: |
-            ./build/* => "/home/jeantessier/jeantessier.com/BookReviews/"
-            ./build/index.html => "/home/jeantessier/jeantessier.com/Books.html"
-            ./build/index.html => "/home/jeantessier/jeantessier.com/BooksBackLog.html"
-            ./build/index.html => "/home/jeantessier/jeantessier.com/SoftwareEngineering/Books.html"
-            ./build/index.html => "/home/jeantessier/jeantessier.com/SoftwareEngineering/BooksBackLog.html"
+            ./book-reviews/* => "/home/jeantessier/jeantessier.com/BookReviews/"
+            ./book-reviews/index.html => "/home/jeantessier/jeantessier.com/Books.html"
+            ./book-reviews/index.html => "/home/jeantessier/jeantessier.com/BooksBackLog.html"
+            ./book-reviews/index.html => "/home/jeantessier/jeantessier.com/SoftwareEngineering/Books.html"
+            ./book-reviews/index.html => "/home/jeantessier/jeantessier.com/SoftwareEngineering/BooksBackLog.html"
