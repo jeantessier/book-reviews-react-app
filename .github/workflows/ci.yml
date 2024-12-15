@@ -32,3 +32,16 @@ jobs:
         with:
           name: book-reviews
           path: ${{ github.workspace }}/build
+
+      - name: scp pipeline
+        uses: cross-the-world/scp-pipeline@master
+        with:
+          host: ${{ secrets.JEANTESSIER_HOST }}
+          user: ${{ secrets.JEANTESSIER_USER }}
+          pass: ${{ secrets.JEANTESSIER_PASS }}
+          scp: |
+            ./build/* => "/home/jeantessier/jeantessier.com/BookReviews/"
+            ./build/index.html => "/home/jeantessier/jeantessier.com/Books.html"
+            ./build/index.html => "/home/jeantessier/jeantessier.com/BooksBackLog.html"
+            ./build/index.html => "/home/jeantessier/jeantessier.com/SoftwareEngineering/Books.html"
+            ./build/index.html => "/home/jeantessier/jeantessier.com/SoftwareEngineering/BooksBackLog.html"
