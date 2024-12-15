@@ -26,3 +26,9 @@ jobs:
 
       - name: Build with Yarn
         run: yarn build
+
+      - name: Store distribution artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: book-reviews
+          path: ${{ github.workspace }}/build
