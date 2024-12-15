@@ -39,12 +39,12 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: book-reviews
+          path: book-reviews
 
-      - name: Unzip artifact
-        run: unzip book-reviews.zip -d book-reviews
+      - name: Display structure of downloaded files
+        run: ls -lR book-reviews
 
       - name: SCP to jeantessier.com
         uses: cross-the-world/scp-pipeline@master
