@@ -10,7 +10,7 @@ export default function Contents({ books, isLoading }) {
                     <div key={book.name}>
                         <span
                             className="marker"
-                            dangerouslySetInnerHTML={{__html: (book.start ? book.start : book.acquired).substring(0, 4)}}
+                            dangerouslySetInnerHTML={{__html: (book.start || book.acquired).substring(0, 4)}}
                         />
                         <a
                             href={'#' + book.name}
