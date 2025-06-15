@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ReactGA from 'react-ga'
-import './tufte.css'
-import './App.css'
-import Contents from './Contents'
 import Books from './Books'
+import Contents from './Contents'
+import './App.css'
+import './tufte.css'
 
 export default function App({ url }) {
     const [title, setTitle] = useState("Readings")

@@ -1,6 +1,5 @@
-import React from 'react'
-import './Titles.css'
 import Title from './Title'
+import './Titles.css'
 
 export default function Titles({ titles }) {
     return (

@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "/BookReviews",
-  "devDependencies": {
-    "babel-preset-react-app": "*",
-    "react-scripts": "*"
+  "scripts": {
+    "start": "GENERATE_SOURCEMAP=false react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@testing-library/dom": "*",
@@ -23,11 +25,9 @@
     "remark-gfm": "*",
     "web-vitals": "*"
   },
-  "scripts": {
-    "start": "GENERATE_SOURCEMAP=false react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "babel-preset-react-app": "*",
+    "react-scripts": "*"
   },
   "jest": {
     "transformIgnorePatterns": [

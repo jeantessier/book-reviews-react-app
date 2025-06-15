@@ -1,4 +1,3 @@
-import React from 'react'
 import './BookHeader.css'
 
 export default function BookHeader({ authors, publisher, years }) {

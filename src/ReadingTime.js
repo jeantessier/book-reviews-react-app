@@ -1,5 +1,3 @@
-import React from 'react'
-
 // Based on Medium's read time calculation
 // https://blog.medium.com/read-time-and-you-bc2048ab620c
 // but without the additional time for images.

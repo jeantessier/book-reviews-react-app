@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './BookHistory.css'
 
 export default function BookHistory({ history }) {

@@ -1,12 +1,11 @@
-import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import gfm from 'remark-gfm'
-import './Book.css'
-import Titles from './Titles'
+import BookFooter from './BookFooter'
 import BookHeader from './BookHeader'
 import ReadingTime from './ReadingTime'
-import BookFooter from './BookFooter'
+import Titles from './Titles'
+import './Book.css'
 
 export default function Book({ name, titles, authors, publisher, years, body, start, stop, history }) {
     return (
