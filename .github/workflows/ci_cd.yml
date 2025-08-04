@@ -47,7 +47,5 @@ jobs:
           host: ${{ secrets.JEANTESSIER_HOST }}
           username: ${{ secrets.JEANTESSIER_USER }}
           password: ${{ secrets.JEANTESSIER_PASS }}
-          source: "./book-reviews"
-          target: "/home/jeantessier/jeantessier.com/BookReviews"
-          rm: true
-          debug: true
+          source: "book-reviews"
+          target: "/home/jeantessier/jeantessier.com"

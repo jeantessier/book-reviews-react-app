@@ -2,7 +2,7 @@
   "name": "book-reviews",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/BookReviews",
+  "homepage": "/book-reviews",
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
