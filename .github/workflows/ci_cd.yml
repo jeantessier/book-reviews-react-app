@@ -42,14 +42,10 @@ jobs:
         uses: actions/download-artifact@v4
 
       - name: SCP to jeantessier.com
-        uses: cross-the-world/scp-pipeline@master
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.JEANTESSIER_HOST }}
-          user: ${{ secrets.JEANTESSIER_USER }}
-          pass: ${{ secrets.JEANTESSIER_PASS }}
-          scp: |
-            ./book-reviews/* => "/home/jeantessier/jeantessier.com/BookReviews/"
-            ./book-reviews/index.html => "/home/jeantessier/jeantessier.com/Books.html"
-            ./book-reviews/index.html => "/home/jeantessier/jeantessier.com/BooksBackLog.html"
-            ./book-reviews/index.html => "/home/jeantessier/jeantessier.com/SoftwareEngineering/Books.html"
-            ./book-reviews/index.html => "/home/jeantessier/jeantessier.com/SoftwareEngineering/BooksBackLog.html"
+          username: ${{ secrets.JEANTESSIER_USER }}
+          password: ${{ secrets.JEANTESSIER_PASS }}
+          source: "./book-reviews"
+          target: "/home/jeantessier/jeantessier.com/BookReviews"
