@@ -30,7 +30,7 @@ jobs:
       - name: Store distribution artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: book-reviews
+          name: BookReviews
           path: ${{ github.workspace }}/build
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
           host: ${{ secrets.JEANTESSIER_HOST }}
           username: ${{ secrets.JEANTESSIER_USER }}
           password: ${{ secrets.JEANTESSIER_PASS }}
-          source: "book-reviews"
+          source: "BookReviews"
           target: "/home/jeantessier/jeantessier.com"
