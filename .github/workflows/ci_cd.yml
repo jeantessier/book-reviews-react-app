@@ -18,14 +18,21 @@ jobs:
         with:
           ref: ${{ github.event.head_commit.id }}
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
 
-      - name: Install modules
-        run: yarn
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Build with Yarn
-        run: yarn build
+        run: pnpm build
 
       - name: Store distribution artifacts
         uses: actions/upload-artifact@v4
