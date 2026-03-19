@@ -49,20 +49,11 @@ jobs:
         id: download
         uses: actions/download-artifact@v8
 
-      - name: Echo download-path
-        run: echo ${{ steps.download.outputs.download-path }}
-
-      - name: Show root folder
-        run: ls -alF
-
-      - name: Show download-path folder
-        run: ls -alFR ${{ steps.download.outputs.download-path }}
-
       - name: SCP to jeantessier.com
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.JEANTESSIER_HOST }}
           username: ${{ secrets.JEANTESSIER_USER }}
           password: ${{ secrets.JEANTESSIER_PASS }}
-          source: "BookReviews"
+          source: ${{ steps.download.outputs.download-path }}
           target: "/home/jeantessier/jeantessier.com"
