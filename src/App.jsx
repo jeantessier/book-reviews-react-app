@@ -5,7 +5,7 @@ import Contents from './Contents'
 import './App.css'
 import './tufte.css'
 
-export default function App({ url }) {
+const App = ({ url }) => {
     const [title, setTitle] = useState("Readings")
     useEffect(() => { document.title = title }, [title])
 
@@ -39,3 +39,5 @@ export default function App({ url }) {
         </div>
     )
 }
+
+export default App

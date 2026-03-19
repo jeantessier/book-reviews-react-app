@@ -9,7 +9,7 @@ const countWords = text => text.split(/\s+/).length
 
 const computeReadingTime = (text, wordsPerMinute) => Math.ceil(countWords(text) / wordsPerMinute)
 
-export default function ReadingTime({text, wordsPerMinute = DEFAULT_WORDS_PER_MINUTE, hideThreshold = DEFAULT_HIDE_THRESHOLD}) {
+const ReadingTime = ({text, wordsPerMinute = DEFAULT_WORDS_PER_MINUTE, hideThreshold = DEFAULT_HIDE_THRESHOLD}) => {
     const readingTime = computeReadingTime(text, wordsPerMinute)
 
     if (readingTime > hideThreshold) {
@@ -22,3 +22,5 @@ export default function ReadingTime({text, wordsPerMinute = DEFAULT_WORDS_PER_MI
         return ""
     }
 }
+
+export default ReadingTime

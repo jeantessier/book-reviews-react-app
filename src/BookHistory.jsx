@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './BookHistory.css'
 
-export default function BookHistory({ history }) {
+const BookHistory = ({ history }) => {
     const [showHistory, setShowHistory] = useState(false)
 
     function toggleShowHistory() {
@@ -29,3 +29,5 @@ export default function BookHistory({ history }) {
         </div>
     )
 }
+
+export default BookHistory
