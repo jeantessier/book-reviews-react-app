@@ -16,14 +16,14 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.2.14",
     "prop-types": "^15.8.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "react-ga": "^3.3.1",
     "react-markdown": "^10.1.0",
     "react-script": "^2.0.5",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
-    "web-vitals": "^5.1.0"
+    "web-vitals": "^5.2.0"
   },
   "devDependencies": {
     "babel-preset-react-app": "^10.1.0",
