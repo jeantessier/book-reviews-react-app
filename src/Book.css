@@ -1,3 +1,7 @@
+.marginnote, .sidenote {
+    font-family: 'Jean Handwriting Liga';
+}
+
 code {
     border-radius: 6px;
     background-color: rgba(27, 31, 35, 0.1);
