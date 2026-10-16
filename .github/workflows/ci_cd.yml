@@ -57,6 +57,6 @@ jobs:
           host: ${{ secrets.JEANTESSIER_HOST }}
           username: ${{ secrets.JEANTESSIER_USER }}
           password: ${{ secrets.JEANTESSIER_PASS }}
-          source: "dist/*"
+          source: dist
           strip_components: 1
-          target: "/home/jeantessier/jeantessier.com/BookReviews"
+          target: /home/jeantessier/jeantessier.com/BookReviews
